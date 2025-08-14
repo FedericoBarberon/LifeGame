@@ -1,4 +1,4 @@
-import { inRange } from "../utils/index"
+import { inRange, matrix } from "../utils/index"
 
 export class LifeGame {
     width: number
@@ -47,6 +47,6 @@ export class LifeGame {
     }
 
     private generateEmptyBoard() {
-        return Array.from({ length: this.width }, () => Array.from({ length: this.height }, () => false))
+        return matrix(this.width, this.height, false)
     }
 }
